@@ -26,8 +26,12 @@
 
 <h2>Timing a trip</h2>
 <p>Tap <strong>Start trip</strong> in the app, or on the widget. The timer counts total
-journey time, including stops. Tap <strong>End trip</strong> to finish; the trip is saved to
-your history on this iPhone.</p>
+journey time, including stops. Tap <strong>Finish Trip Now</strong> to finish — the widget's
+button is the shorter <strong>Finish Now</strong> — and the trip is saved to your history on
+this iPhone.</p>
+<p><strong>In-car time</strong> is that journey time with your stops and pauses taken out. It
+is arithmetic on the times recorded, not detected driving: TripTime cannot tell whether the
+car was moving.</p>
 
 <h2>Pausing</h2>
 <p><strong>Pause</strong> keeps the trip and its original start time, freezes the timer and
@@ -43,8 +47,11 @@ automations once, in the Shortcuts app:</p>
 <tr><td>CarPlay → Connects</td><td>Run Immediately</td><td>TripTime → Start Trip</td></tr>
 <tr><td>CarPlay → Disconnects</td><td>Run Immediately</td><td>TripTime → CarPlay Disconnected</td></tr>
 </table>
-<p>Use <strong>CarPlay Disconnected</strong>, not End Trip. End Trip finishes a trip
-immediately and cannot be resumed, so a brief dropout would split one drive in two.</p>
+<p>Use <strong>CarPlay Disconnected</strong>, not Finish Trip Now. Finish Trip Now ends a
+trip immediately and it cannot be resumed, so a brief dropout would split one drive in two.
+The app's <strong>Set Up CarPlay</strong> screen, under the Settings button, opens Shortcuts
+and lists these steps. iOS requires you to create the automations yourself; no app is allowed
+to add them for you.</p>
 
 <h2>The reconnect grace period</h2>
 <p>After a CarPlay disconnect the trip waits for the period you choose — off, 5 minutes,
@@ -55,7 +62,8 @@ disconnected, and the waiting time is not counted.</p>
 <h2>The widget</h2>
 <p>Add TripTime to your Home Screen, and on iOS 26 or later to the CarPlay widget area via
 <code>Settings → General → CarPlay → your car → Widgets</code>. Choose Small, Medium or Large
-timer text in the app's settings.</p>
+timer text under the Settings button in the app's title bar, which also holds the reconnect
+grace period and CarPlay setup.</p>
 
 <h2>Common questions</h2>
 <p><strong>The timer did not start when I got in the car.</strong> Check the two automations
@@ -66,8 +74,7 @@ automations will run.</p>
 kind and requests no permissions.</p>
 
 <h2>Contact</h2>
-<p>Report a problem or ask a question on the
-   <a href="https://github.com/rayan65/triptime-support/issues">TripTime issue tracker</a>.</p>
+<p>Email <a href="mailto:CONTACT_EMAIL_PLACEHOLDER">CONTACT_EMAIL_PLACEHOLDER</a>.</p>
 
 <footer>
 <p>TripTime · <a href="privacy.html">Privacy Policy</a></p>
