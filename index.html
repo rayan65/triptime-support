@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TripTime Support</title>
+<title>Trip Insights Support</title>
 <style>
   :root { color-scheme: light dark; --fg:#111; --muted:#555; --bg:#fff; --line:#e3e3e3; }
   @media (prefers-color-scheme: dark) { :root { --fg:#f2f2f2; --muted:#a8a8a8; --bg:#0b1113; --line:#223; } }
@@ -21,14 +21,14 @@
 </head>
 <body>
 <main>
-<h1>TripTime Support</h1>
+<h1>Trip Insights Support</h1>
 <p class="sub">An elapsed-time tracker for car journeys. No location, no account, no network.</p>
 
 <h2>What the home screen shows</h2>
-<p>TripTime opens on its CarPlay card, because timing itself is what the app is for.
+<p>Trip Insights opens on its CarPlay card, because timing itself is what the app is for.
 Once you have created the two automations below, tap <strong>I&rsquo;ve created the
 automations</strong> and the card folds down to a compact setup-and-help row. That is
-only your note to the app: TripTime cannot see your automations and never claims to have
+only your note to the app: Trip Insights cannot see your automations and never claims to have
 checked them. You can bring the full card back from Settings.</p>
 <p>While a trip is running it takes the top of the screen, with the timer, the start
 time, in-car time and stops.</p>
@@ -40,7 +40,7 @@ journey time, including stops. Tap <strong>Finish Trip Now</strong> to finish �
 button is the shorter <strong>Finish Now</strong> — and the trip is saved to your history on
 this iPhone.</p>
 <p><strong>In-car time</strong> is that journey time with your stops and pauses taken out. It
-is arithmetic on the times recorded, not detected driving: TripTime cannot tell whether the
+is arithmetic on the times recorded, not detected driving: Trip Insights cannot tell whether the
 car was moving.</p>
 
 <h2>Pausing</h2>
@@ -54,8 +54,8 @@ counts the gap as stop time and records it in the trip's stop breakdown.</p>
 automations once, in the Shortcuts app:</p>
 <table>
 <tr><th>Trigger</th><th>Run mode</th><th>Action</th></tr>
-<tr><td>CarPlay → Connects</td><td>Run Immediately</td><td>TripTime → Start Trip</td></tr>
-<tr><td>CarPlay → Disconnects</td><td>Run Immediately</td><td>TripTime → CarPlay Disconnected</td></tr>
+<tr><td>CarPlay → Connects</td><td>Run Immediately</td><td>Trip Insights → Start Trip</td></tr>
+<tr><td>CarPlay → Disconnects</td><td>Run Immediately</td><td>Trip Insights → CarPlay Disconnected</td></tr>
 </table>
 <p>Use <strong>CarPlay Disconnected</strong>, not Finish Trip Now. Finish Trip Now ends a
 trip immediately and it cannot be resumed, so a brief dropout would split one drive in two.
@@ -70,7 +70,7 @@ gap as stop time. If the window passes, the trip is recorded as ending at the mo
 disconnected, and the waiting time is not counted.</p>
 
 <h2>The widget</h2>
-<p>Add TripTime to your Home Screen, and on iOS 26 or later to the CarPlay widget area via
+<p>Add Trip Insights to your Home Screen, and on iOS 26 or later to the CarPlay widget area via
 <code>Settings → General → CarPlay → your car → Widgets</code>. Choose Small, Medium or Large
 timer text under the Settings button in the app's title bar, which also holds the reconnect
 grace period and CarPlay setup.</p>
@@ -86,14 +86,14 @@ removes everything and asks separately.</p>
 exist and are set to Run Immediately. After restarting your iPhone, unlock it once before the
 automations will run.</p>
 <p><strong>A trip is still running.</strong> If a disconnect was missed, end it in the app.</p>
-<p><strong>Does it track where I go?</strong> No. TripTime has no location features of any
+<p><strong>Does it track where I go?</strong> No. Trip Insights has no location features of any
 kind and requests no permissions.</p>
 
-<h2>Support</h2>
-<p>For help or privacy questions, <a href="https://github.com/rayan65/triptime-support/issues">open a support issue on GitHub</a>. Issues are public; please do not include personal information.</p>
+<h2>Contact</h2>
+<p>Email <a href="mailto:CONTACT_EMAIL_PLACEHOLDER">CONTACT_EMAIL_PLACEHOLDER</a>.</p>
 
 <footer>
-<p>TripTime · <a href="privacy.html">Privacy Policy</a></p>
+<p>Trip Insights · <a href="privacy.html">Privacy Policy</a></p>
 </footer>
 </main>
 </body>
