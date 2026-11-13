@@ -3,7 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Trip Insights Support</title>
+<title>Trip Insights — Free CarPlay Trip Timer &amp; Trip History</title>
+<meta name="description" content="See your trip time on your CarPlay display. Trip Insights is a free iPhone trip timer with stop tracking, reconnect grace periods and trip history. One-time Shortcuts setup required.">
+<link rel="canonical" href="https://rayan65.github.io/triptime-support/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Trip Insights — Your trip time, on your dash">
+<meta property="og:description" content="Free trip timing for CarPlay, with stops, pause/resume and trip history. Set up two Shortcuts automations once.">
+<meta property="og:url" content="https://rayan65.github.io/triptime-support/">
+<meta name="twitter:card" content="summary">
+<meta name="apple-itunes-app" content="app-id=6829318971">
 <style>
   :root { color-scheme: light dark; --fg:#111; --muted:#555; --bg:#fff; --line:#e3e3e3; }
   @media (prefers-color-scheme: dark) { :root { --fg:#f2f2f2; --muted:#a8a8a8; --bg:#0b1113; --line:#223; } }
@@ -16,13 +24,42 @@
   table { border-collapse:collapse; width:100%; margin:.6em 0; }
   th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
   code { background:rgba(127,127,127,.15); padding:1px 5px; border-radius:4px; }
+  a { color:#287451; }
+  .download { display:inline-block; padding:13px 22px; margin:12px 10px 8px 0; border-radius:12px; background:#a5f0cd; color:#0b2118; font-weight:700; text-decoration:none; }
+  .lead { font-size:clamp(2rem,7vw,3.3rem); line-height:1.12; letter-spacing:-.035em; margin:.35em 0; }
+  .eyebrow { font-weight:700; letter-spacing:.1em; text-transform:uppercase; font-size:.85rem; }
+  .features { padding:18px 22px; border:1px solid var(--line); border-radius:16px; }
+  .features li { margin:.5em 0; }
+  .arabic { margin:2em 0; padding:20px; border:1px solid var(--line); border-radius:16px; }
+  @media(prefers-color-scheme:dark) { a { color:#a5f0cd; } }
   footer { margin-top:3em; color:var(--muted); font-size:.9rem; }
 </style>
 </head>
 <body>
 <main>
-<h1>Trip Insights Support</h1>
-<p class="sub">An elapsed-time tracker for car journeys. No location, no account, no network.</p>
+<header>
+<p class="eyebrow">Trip Insights · Free for iPhone</p>
+<h1 class="lead">Your trip time.<br>Right on your dash.</h1>
+<p>Keep your journey time in view with a CarPlay widget. Track stops, resume after a short break, and look back at your trips.</p>
+<a class="download" href="https://apps.apple.com/app/id6829318971">View on the App Store</a>
+<a href="#carplay-setup">How to set up CarPlay</a>
+<p class="sub">Automatic timing requires two personal automations in Shortcuts. CarPlay widgets require iOS 26 or later and a compatible CarPlay display.</p>
+<p class="sub">Previously named TripTime by Rayan. Store naming may vary while the rename rolls out.</p>
+</header>
+<ul class="features">
+<li><strong>A timer on your dashboard.</strong> See elapsed trip time without opening the iPhone app.</li>
+<li><strong>Short stops, one trip.</strong> Choose a reconnect grace period to keep brief CarPlay disconnections together.</li>
+<li><strong>Pause and resume.</strong> Separate stop time from the rest of your journey.</li>
+<li><strong>Your trip history.</strong> Review start and end times, stop breakdowns and weekly totals.</li>
+<li><strong>No location tracking or account.</strong> Trip records are stored on your iPhone.</li>
+</ul>
+<section class="arabic" lang="ar" dir="rtl">
+<h2 style="margin-top:0">وقت مشوارك، قدامك على شاشة السيارة</h2>
+<p>Trip Insights تطبيق مجاني للآيفون يعرض مدة المشوار في ويدجت CarPlay، ويحفظ سجل الرحلات وأوقات التوقف. وإذا فصل الاتصال لفترة قصيرة، يقدر يكمل نفس الرحلة حسب المهلة اللي تختارها.</p>
+<p>تضبط عمليتي أتمتة في تطبيق «الاختصارات» مرة واحدة، وبعدها يبدأ التوقيت عند اتصال CarPlay ويتعامل مع التوقف عند فصله. بدون حساب وبدون تتبع موقعك.</p>
+<a class="download" href="https://apps.apple.com/sa/app/id6829318971">عرض التطبيق في App Store</a>
+<p class="sub">ويدجت CarPlay يتطلب iOS 26 أو أحدث وشاشة سيارة متوافقة. هذا شرح بالعربية، وليس إعلانًا عن دعم واجهة التطبيق للعربية.</p>
+</section>
 
 <h2>What the home screen shows</h2>
 <p>Trip Insights opens on its CarPlay card, because timing itself is what the app is for.
@@ -49,9 +86,8 @@ shows how long you have been paused. There is no deadline — the trip stays pau
 resume or end it, and reconnecting CarPlay will not override it. <strong>Resume</strong>
 counts the gap as stop time and records it in the trip's stop breakdown.</p>
 
-<h2>Automatic timing with CarPlay</h2>
-<p>iOS does not let an app start itself when your car connects, so you create two personal
-automations once, in the Shortcuts app:</p>
+<h2 id="carplay-setup">Automatic timing with CarPlay</h2>
+<p>To enable automatic trip timing, create these two personal automations once in the Shortcuts app:</p>
 <table>
 <tr><th>Trigger</th><th>Run mode</th><th>Action</th></tr>
 <tr><td>CarPlay → Connects</td><td>Run Immediately</td><td>Trip Insights → Start Trip</td></tr>
@@ -60,8 +96,7 @@ automations once, in the Shortcuts app:</p>
 <p>Use <strong>CarPlay Disconnected</strong>, not Finish Trip Now. Finish Trip Now ends a
 trip immediately and it cannot be resumed, so a brief dropout would split one drive in two.
 The app's <strong>Set Up CarPlay</strong> screen, under the Settings button, opens Shortcuts
-and lists these steps. iOS requires you to create the automations yourself; no app is allowed
-to add them for you.</p>
+and lists these steps. The actions are provided by Trip Insights; you create their CarPlay triggers in Shortcuts.</p>
 
 <h2>The reconnect grace period</h2>
 <p>After a CarPlay disconnect the trip waits for the period you choose — off, 5 minutes,
@@ -89,8 +124,8 @@ automations will run.</p>
 <p><strong>Does it track where I go?</strong> No. Trip Insights has no location features of any
 kind and requests no permissions.</p>
 
-<h2>Contact</h2>
-<p>Email <a href="mailto:CONTACT_EMAIL_PLACEHOLDER">CONTACT_EMAIL_PLACEHOLDER</a>.</p>
+<h2>Support</h2>
+<p>For help or privacy questions, <a href="https://github.com/rayan65/triptime-support/issues">open a support issue on GitHub</a>. Issues are public; please do not include personal information.</p>
 
 <footer>
 <p>Trip Insights · <a href="privacy.html">Privacy Policy</a></p>
